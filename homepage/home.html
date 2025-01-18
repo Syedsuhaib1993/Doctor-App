@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="home.css">
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  </head>
+  <body>
+<div class="parsent">
+<div class="logo    flex justify-between  w-[100%] h-[100px]">
+  <div class="imglogo max-[1024px]:mx-auto max-[1024px]:w-[50%] max-[550px]:w-[80%] ml-8  w-[30%] h-[100%]">
+    <img src="images/hh.jpg" class="w-[60%] h-[100%]" alt="">
+  </div>
+  
+  <div class="phoneicon max-[1024px]:hidden flex ml-[200px] p-5 w-[25%] h-[100%] ">
+    <img src="images/call.png" class="w-[50px] h-[50px]" alt="">
+   <div class="num ml-5">
+    <p class="font-bold text-[1.8rem]"> 415-205-5550</p>
+    <p class="ml-3">24/7 Emergency Phone</p>
+   </div>
+
+  </div>
+  <div class="phoneicon max-[1024px]:hidden flex p-5 w-[25%] h-[100%] ">
+    <img src="images/clock.png" class="w-[50px] h-[50px]" alt="">
+   <div class="num ml-5">
+    <p class="font-bold text-[1.8rem]"> 415-205-5550</p>
+    <p class="ml-3">24/7 Emergency Phone</p>
+   </div>
+
+  </div>
+
+
+</div>
+<hr>
+
+<!-- ///navbar//// -->
+ <div class="navbar">
+  <nav>
+      
+    <ul id="menuList" >
+        <li ><a href="">Home</a></li>
+        <li ><a href="">About</a></li>
+        <li ><a href="">Appoinment Book</a></li>
+        <li ><a href="">Doctor's</a></li>
+        <li ><a href="">Contact us</a></li>
+
+    </ul>
+    <div class="menu-icon">
+<img c src="images/menu_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" class="w-[50px] h-[50px]" onclick="toggleMenu()" alt="">
+      <!-- <i class="fa-solid fa-bars" onclick="toggleMenu()"></i> -->
+    </div>
+
+   
+    <div class="socialitems flex  gap-5">
+      <img class="w-[20px] h-[20px]" src="images/facebook-f-brands-solid.svg" alt="">
+      <img class="w-[20px] h-[20px]" src="images/linkedin-brands-solid.svg" alt="">
+      <img class="w-[20px] h-[20px]" src="images/p-solid.svg" alt="">
+      <img class="w-[20px] h-[20px]" src="images/twitter-brands-solid.svg" alt="">
+      
+</div>
+     
+
+    
+</nav>
+
+
+ </div>
+
+<!-- /////mainSlider/// -->
+ <div class="mainSide w-[100%] h-[90vh]">
+<div class="bgImage ">
+  <div class="colo w-[100%] h-[90vh] absolute"></div>
+  
+  <div class="text relative ">
+    <p class=" max-[755px]:text-[1rem] text-center text-white pt-[200px] text-[1.8rem] ">Ready for peace of mind?</p>
+    <h1 class="max-[755px]:text-[2rem] text-center text-white text-[3rem] font-bold opacity-1">Book Your Ultrasound Appointment Today</h1>
+    <p class="max-[755px]:text-[0.5rem] text-center text-white text-[1rem] leading-[1.5em] ">Take control of your health with accurate, affordable ultrasound scans at My Health and Wellbeing Clinic.<br>
+       Whether you need a routine check-up or specific diagnostic imaging, our team is here to provide quality care..</p>
+       <div class="btns  flex justify-center flex-col  gap-5 mt-5 items-center">
+       <button class=" w-[100px] h-[50px] rounded-[50px] bg-[#4d3589] text-white hover:border-2 hover:border-white delay-1 font-bold capitalize" >Email Us</button>
+       <button class=" w-[200px] h-[50px] rounded-[50px] bg-[#4d3589] text-white hover:border-2 hover:border-white delay-1 font-bold capitalize">Book An appoinment</button>
+       <button class=" w-[150px] h-[50px] rounded-[50px] bg-[#4d3589] text-white hover:border-2 hover:border-white delay-1 font-bold capitalize">Whatapp Us</button>
+      </div>
+  </div>
+  
+  
+</div>
+ </div>
+
+<!-- ////infomation//// -->
+<div class="info w-[100%] h-[500px]  font-bold ">
+<div class="text mt-8">
+  <p class="text-[#4d3589] text-center">Doctors</p>
+  <p class="text-center text-[3rem]">Our Experts Doctors <span class="font-bold text-[#4d3589]">For The <br> Patients</span></p>
+
+  
+  <div class="max-[1200px]:flex-wrap patientsInfo flex justify-center gap-5  ">
+    <p class="uppercase border-[1px] border-black w-[170px] h-[40px] rounded-[50px] text-center flex items-center justify-center hover:bg-[#4d3589] hover:text-white hover:border-none ">cardiologist</p>
+    <p class="uppercase border-[1px] border-black w-[170px] h-[40px] rounded-[50px] text-center flex items-center justify-center hover:bg-[#4d3589] hover:text-white hover:border-none ">audiologist</p>
+    <p class="uppercase border-[1px] border-black w-[170px] h-[40px] rounded-[50px] text-center flex items-center justify-center hover:bg-[#4d3589] hover:text-white hover:border-none ">Dermatologist</p>
+    <p class="uppercase border-[1px] border-black w-[170px] h-[40px] rounded-[50px] text-center flex items-center justify-center hover:bg-[#4d3589] hover:text-white hover:border-none ">Diabetologist</p>
+    <p class="uppercase border-[1px] border-black w-[170px] h-[40px] rounded-[50px] text-center flex items-center justify-center hover:bg-[#4d3589] hover:text-white hover:border-none ">chest physician</p>
+    <p class="uppercase border-[1px] border-black w-[170px] h-[40px] rounded-[50px] text-center flex items-center justify-center hover:bg-[#4d3589] hover:text-white hover:border-none ">dental surgeon</p>
+  </div>
+
+  <div class="max-[1200px]:flex-wrap patientsInfo flex justify-center gap-3 mt-3">
+    <p class="uppercase border-[1px] border-black w-[200px] h-[40px] rounded-[50px] text-center flex items-center justify-center hover:bg-[#4d3589] hover:text-white hover:border-none ">endocrinologist</p>
+    <p class="uppercase border-[1px] border-black w-[150px] h-[40px] rounded-[50px] text-center flex items-center justify-center hover:bg-[#4d3589] hover:text-white hover:border-none ">Ent surgeon</p>
+    <p class="uppercase border-[1px] border-black w-[150px] h-[40px] rounded-[50px] text-center flex items-center justify-center hover:bg-[#4d3589] hover:text-white hover:border-none ">eye surgeon</p>
+    <p class="uppercase border-[1px] border-black w-[250px] h-[40px] rounded-[50px] text-center flex items-center justify-center hover:bg-[#4d3589] hover:text-white hover:border-none ">gastroenterologist</p>
+    <p class="uppercase border-[1px] border-black w-[200px] h-[40px] rounded-[50px] text-center flex items-center justify-center hover:bg-[#4d3589] hover:text-white hover:border-none ">general physician</p>
+    <p class="uppercase border-[1px] border-black w-[200px] h-[40px] rounded-[50px] text-center flex items-center justify-center hover:bg-[#4d3589] hover:text-white hover:border-none ">general surgeon</p>
+  
+  </div>
+
+  <div class="max-[1200px]:flex-wrap patientsInfo flex justify-center gap-5 mt-3">
+    <p class="uppercase border-[1px] border-black w-[170px] h-[40px] rounded-[50px] text-center flex items-center justify-center  hover:bg-[#4d3589] hover:text-white hover:border-none ">gynaecologist</p>
+    <p class="uppercase border-[1px] border-black w-[270px] h-[40px] rounded-[50px] text-center flex items-center justify-center  hover:bg-[#4d3589] hover:text-white hover:border-none ">inetrventional radiologist</p>
+    <p class="uppercase border-[1px] border-black w-[260px] h-[40px] rounded-[50px] text-center flex items-center justify-center  hover:bg-[#4d3589] hover:text-white hover:border-none ">maxillofasical surgeon</p>
+    <p class="uppercase border-[1px] border-black w-[170px] h-[40px] rounded-[50px] text-center flex items-center justify-center  hover:bg-[#4d3589] hover:text-white hover:border-none ">nepherologist</p>
+    <p class="uppercase border-[1px] border-black w-[170px] h-[40px] rounded-[50px] text-center flex items-center justify-center  hover:bg-[#4d3589] hover:text-white hover:border-none ">neurologist</p>
+  
+  
+  </div>
+
+  <div class="max-[1200px]:flex-wrap patientsInfo flex justify-center gap-3 mt-3">
+    <p class="uppercase border-[1px] border-black w-[200px] h-[40px] rounded-[50px] text-center flex items-center justify-center  hover:bg-[#4d3589] hover:text-white hover:border-none ">neurosurgeon</p>
+    <p class="uppercase border-[1px] border-black w-[200px] h-[40px] rounded-[50px] text-center flex items-center justify-center  hover:bg-[#4d3589] hover:text-white hover:border-none ">oncologist</p>
+    <p class="uppercase border-[1px] border-black w-[200px] h-[40px] rounded-[50px] text-center flex items-center justify-center  hover:bg-[#4d3589] hover:text-white hover:border-none ">orthodontist</p>
+    <p class="uppercase border-[1px] border-black w-[200px] h-[40px] rounded-[50px] text-center flex items-center justify-center  hover:bg-[#4d3589] hover:text-white hover:border-none ">orthopedic surgeon</p>
+    <p class="uppercase border-[1px] border-black w-[200px] h-[40px] rounded-[50px] text-center flex items-center justify-center  hover:bg-[#4d3589] hover:text-white hover:border-none ">paedicatric surgeon</p>
+    <p class="uppercase border-[1px] border-black w-[200px] h-[40px] rounded-[50px] text-center flex items-center justify-center  hover:bg-[#4d3589] hover:text-white hover:border-none ">pediatrician</p>
+  
+  </div>
+
+  <div class="max-[1200px]:flex-wrap patientsInfo flex justify-center gap-3 mt-3">
+    <p class=" uppercase border-[1px] border-black w-[200px] h-[40px] rounded-[50px] text-center flex items-center justify-center  hover:bg-[#4d3589] hover:text-white hover:border-none ">physiotheratist</p>
+    <p class="uppercase border-[1px] border-black w-[200px] h-[40px] rounded-[50px] text-center flex items-center justify-center  hover:bg-[#4d3589] hover:text-white hover:border-none ">psychiatrist</p>
+    <p class="uppercase border-[1px] border-black w-[200px] h-[40px] rounded-[50px] text-center flex items-center justify-center  hover:bg-[#4d3589] hover:text-white hover:border-none ">radiologist</p>
+    <p class="uppercase border-[1px] border-black w-[200px] h-[40px] rounded-[50px] text-center flex items-center justify-center  hover:bg-[#4d3589] hover:text-white hover:border-none ">rheumatologist</p>
+    <p class="uppercase border-[1px] border-black w-[200px] h-[40px] rounded-[50px] text-center flex items-center justify-center  hover:bg-[#4d3589] hover:text-white hover:border-none ">urologist</p>
+  
+  </div>
+
+
+</div>
+</div>
+
+</div>
+  </body>
+
+  <script src="home.js"></script>
+</html>
