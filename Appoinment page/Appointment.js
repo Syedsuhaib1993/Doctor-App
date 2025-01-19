@@ -42,6 +42,7 @@ async function submitform() {
         text: "Some Fields are missing!",
         footer: 'Kindly fill all fields'
       });
+      return
   } else {
     
   const { error } = await supabaseClient

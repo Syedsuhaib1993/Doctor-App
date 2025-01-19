@@ -1,10 +1,10 @@
-// Initialize Supabase Client
-// const supabaseUrl = "https://saqsepgxtvpgiigybsvd.supabase.co";
-// const supabaseKey ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNhcXNlcGd4dHZwZ2lpZ3lic3ZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzYwMTkzMzAsImV4cCI6MjA1MTU5NTMzMH0.lc9v_HyA9XkC_JoHNjpa4kIqts2hrkq_L6zJXfYNyQo";
+// <<<<<<SUPABASE>>>>>>
 
- const supabaseUrl = "https://saqsepgxtvpgiigybsvd.supabase.co";
-const supabaseKey ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNhcXNlcGd4dHZwZ2lpZ3lic3ZkIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczNjAxOTMzMCwiZXhwIjoyMDUxNTk1MzMwfQ.lQ4iwMm7_nI0UwEUBuHq54X9-keZ3tvqBqSRQ2waGGg";
+const supabaseUrl = "https://ypzjiqjrqsagqkvkczow.supabase.co";
+const supabaseKey =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlwemppcWpycXNhZ3Frdmtjem93Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzcxOTk2OTQsImV4cCI6MjA1Mjc3NTY5NH0.Tmsv-ZRDHgL3bJ0leeK2Sw2CcevuJK5eJS_83RcdMuU";
 const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+console.log(supabaseClient);
 
 
 
@@ -40,9 +40,9 @@ signupBtn.addEventListener('click', async () => {
 
     if (!email || !password || !user_name ) {
         Swal.fire({
-            icon: "error",
             title: "Oops...",
-            text: "Please fill in both fields!",
+            text: "Please fill the required fields!",
+            footer: 'First create an Account'
           });
         return;
     }
@@ -51,13 +51,14 @@ signupBtn.addEventListener('click', async () => {
     if (error) {
         alert(`Error: ${error.message}`);
     } else {
-        // alert('Signup successful');
         Swal.fire("Signup successful!");
-        loginForm.classList.add("hidden");
-        signupForm.classList.remove("hidden");
         console.log(data);
         signupEmail.value= ""
         signupPassword.value= ""
+        signup_user_name.value= ""
+        loginForm.classList.remove("hidden");
+        signupForm.classList.add("hidden");
+
     }
 
 
@@ -88,8 +89,7 @@ loginBtn.addEventListener("click", async () => {
     if (!email || !password) {
         Swal.fire({
             icon: "error",
-            title: "Oops...",
-            text: "Please fill in both email and password!",
+            text: "Enter Correct Email and Passwords!",
           });
         // alert("Please fill in both email and password");
         return;
@@ -102,18 +102,7 @@ loginBtn.addEventListener("click", async () => {
         console.log(error);
     } else {
         Swal.fire("Login successful!");        
-        window.location.href = '../Admin page/admin.html';
+        window.location.href = '../homepage/home.html';
     }
 }
 );
-
-
-// forgetpassword 
-
-// const forget = document.getElementById("forget-password")
-
-
-// function forgetpassword(){
-//     const forgetpassword = forget
-//     console.log(forgetpassword)
-// }
