@@ -42,32 +42,34 @@ async function submitform() {
         text: "Some Fields are missing!",
         footer: 'Kindly fill all fields'
       });
-  } 
-
+  } else {
+    
   const { error } = await supabaseClient
-    .from("App")
-    .insert({
-      Name: Name,
-      Fname: Fname,
-      Page: Page,
-      Pgender: Pgender,
-      Pemail: Pemail,
-      Pnumber: Pnumber,
-      Paddress: Paddress,
-      Pdate: Pdate,
-      Pcomment: Pcomment,
-      Ptime:Ptime,
-      Specialty:Specialty,
-      Doctor:Doctor
+  .from("App")
+  .insert({
+    Name: Name,
+    Fname: Fname,
+    Page: Page,
+    Pgender: Pgender,
+    Pemail: Pemail,
+    Pnumber: Pnumber,
+    Paddress: Paddress,
+    Pdate: Pdate,
+    Pcomment: Pcomment,
+    Ptime:Ptime,
+    Specialty:Specialty,
+    Doctor:Doctor
+  });
+  Swal.fire({
+      title: "Your Appointment has been confirmed!",
+      icon: "success",
+      draggable: true
     });
-    Swal.fire({
-        title: "Your Appointment has been confirmed!",
-        icon: "success",
-        draggable: true
-      });
-      setInterval(()=>{
-        window.location.href = '../homepage/home.html'
-      },2000)
-            
+    setInterval(()=>{
+      window.location.href = '../homepage/home.html'
+    },2000)
+          
+  }
+
 }
 
