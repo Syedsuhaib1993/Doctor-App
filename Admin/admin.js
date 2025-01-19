@@ -24,8 +24,9 @@ async function fetchdata() {
     const Num = data[i].Pnumber;
     const date = data[i].Pdate;
     const time = data[i].Ptime;
-
-    console.log(Name, Doc, Num, date, time);
+    const id = data[i].id
+    
+    // console.log(Name, Doc, Num, date, time);
 
     const lidoc = document.createElement("li");
     const liname = document.createElement("li");
@@ -46,13 +47,19 @@ async function fetchdata() {
     lidate.innerHTML += date;
 
     litime.innerHTML += time;
-  liname.addEventListener('click',async(Name)=>{
-    alert('delete')
+
+  liname.addEventListener('click',async(id)=>{
+    console.log(Name);
+    
     const response = await supabaseClient
   .from('App')
   .delete()
-  .eq(Name)
-window.location.reload()
+  .eq(id,'id')
+  if(error){
+    console.log('error');
+    
+  }
+// window.location.reload()
 
   })
   }
@@ -60,3 +67,23 @@ window.location.reload()
 }
 
 fetchdata();
+
+
+
+
+// async function comnpleteTodo(id) {
+//   const { error } = await supabaseClient
+//   .from('todo')
+//   .update({ done: 'done' })
+//   .eq('id', id)
+
+// }
+
+
+// async function deleTodo(id) {
+//   const response = await supabaseClient
+//   .from('todo')
+//   .delete()
+//   .eq('id', id)
+
+// }
