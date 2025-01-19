@@ -26,7 +26,7 @@ async function fetchdata() {
     const time = data[i].Ptime;
 
     console.log(Name, Doc, Num, date, time);
-    
+
     const lidoc = document.createElement("li");
     const liname = document.createElement("li");
     const linum = document.createElement("li");
@@ -46,7 +46,17 @@ async function fetchdata() {
     lidate.innerHTML += date;
 
     litime.innerHTML += time;
+  liname.addEventListener('click',async(Name)=>{
+    alert('delete')
+    const response = await supabaseClient
+  .from('App')
+  .delete()
+  .eq(Name)
+window.location.reload()
+
+  })
   }
+
 }
 
 fetchdata();
