@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor Appointment Form</title>
+    <link rel="website icon" type="pnf" href="../homepage/images/doc.png" />
+    <link rel="stylesheet" href="check.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=stethoscope" />
+  </head>
+  <body>
+
+      <h1>Check your appointment</h1>
+      <div id="div">
+        <input type="text" id="pname" placeholder="Enter your name">
+        <button type="button" onclick="getdata()">Search</button></div>
+    <div class="parent">
+
+      <div id="cart" class="hidden">
+        <div>
+        <h4>NAME</h4>
+        <ul id="ulname">
+          <!-- <li>Haseeb sheikh</li> -->
+        </ul>
+      </div>
+
+      <div>
+        <h4>DOCTOR NAME</h4>
+        <ul id="uldoc">
+          <!-- <li>dierhea and vomiting</li> -->
+        </ul>
+      </div>
+
+      <div>
+        <h4>DATE</h4>
+        <ul id="uldate">
+          <!-- <li>22-11-2025</li> -->
+        </ul>
+      </div>
+
+      <div>
+        <h4>TIME</h4>
+        <ul id="ultime">
+          <!-- <li>00:36</li> -->
+        </ul>
+      </div>
+
+      <div>
+        <h4>NUMBER</h4>
+        <ul id="ulnum">
+          <!-- <li>DR Haseeb sheikh</li> -->
+        </ul>
+      </div>
+
+    </div>
+
+</div>
+  </body>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="check.js"></script>
+</html>
