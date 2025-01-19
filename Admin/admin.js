@@ -69,8 +69,6 @@ async function fetchdata() {
 fetchdata();
 
 
-
-
 // async function comnpleteTodo(id) {
 //   const { error } = await supabaseClient
 //   .from('todo')
