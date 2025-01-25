@@ -4,7 +4,7 @@ const supabaseUrl = "https://ypzjiqjrqsagqkvkczow.supabase.co";
 const supabaseKey =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlwemppcWpycXNhZ3Frdmtjem93Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzcxOTk2OTQsImV4cCI6MjA1Mjc3NTY5NH0.Tmsv-ZRDHgL3bJ0leeK2Sw2CcevuJK5eJS_83RcdMuU";
 const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
-console.log(supabaseClient);
+// console.log(supabaseClient);
 
 const uldoc = document.getElementById("uldoc");
 const ulname = document.getElementById("ulname");
@@ -12,6 +12,7 @@ const ulnum = document.getElementById("ulnum");
 const uldate = document.getElementById("uldate");
 const ultime = document.getElementById("ultime");
 // console.log(uldate,uldoc,ulname,ulnum,ultime);
+
 
 async function fetchdata() {
   const { data, error } = await supabaseClient.from("App").select();
@@ -26,7 +27,7 @@ async function fetchdata() {
     const time = data[i].Ptime;
     const id = data[i].id
     
-    // console.log(Name, Doc, Num, date, time);
+    // console.log(data[i].id);
 
     const lidoc = document.createElement("li");
     const liname = document.createElement("li");
@@ -41,6 +42,7 @@ async function fetchdata() {
     lidoc.innerHTML += Doc;
 
     liname.innerHTML += Name;
+    liname.setAttribute('class','cursor-pointer hover:font-bold')
 
     linum.innerHTML += Num;
 
@@ -48,40 +50,22 @@ async function fetchdata() {
 
     litime.innerHTML += time;
 
-  liname.addEventListener('click',async(id)=>{
-    console.log(Name);
-    
-    const response = await supabaseClient
+    liname.addEventListener('dblclick',async()=>{
+      console.log(id);
+      confirm('Do you want to delete this Appointment')
+      const response = await supabaseClient
   .from('App')
   .delete()
-  .eq(id,'id')
-  if(error){
-    console.log('error');
-    
-  }
-// window.location.reload()
+  .eq('id', id)
+  alert('delete')
+      window.location.reload()
+      
+    })
 
-  })
   }
 
+  
 }
 
 fetchdata();
 
-
-// async function comnpleteTodo(id) {
-//   const { error } = await supabaseClient
-//   .from('todo')
-//   .update({ done: 'done' })
-//   .eq('id', id)
-
-// }
-
-
-// async function deleTodo(id) {
-//   const response = await supabaseClient
-//   .from('todo')
-//   .delete()
-//   .eq('id', id)
-
-// }
