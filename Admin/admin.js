@@ -62,6 +62,19 @@ async function fetchdata() {
       
     })
 
+  //   liname.addEventListener('click',async()=>{
+  //     liname.setAttribute('class',"line-through")
+  //     linum.setAttribute('class',"line-through")
+  //     lidate.setAttribute('class',"line-through")
+  //     litime.setAttribute('class',"line-through")
+  //     lidoc.setAttribute('class',"line-through")
+  //     const { error } = await supabaseClient
+  // .from('App')
+  // .update({ Name: liname })
+  // .eq('id', id)
+
+  //   })
+
   }
 
   
